@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something!</title>
+</head>
+
+<body>
+    <H2>My Cars</H2>
+
+    <p>Information about my cars:</p>
+
+    <p id="carList"></p>
+
+    <script>
+        const date = new Date();
+        let myCars = ["Chevrolet", "Audi", "Ford"];
+        myCars.push("Mercedes Benz");
+        myCars.push("Dodge");
+
+        let myFunction = myCars.length;
+
+        myCars[1] = "Mercedes Benz";
+        myCars[2] = "Audi";
+        myCars[3] = "Ford";
+
+        let list = "<ul>";
+
+        for (let i = 0; i < myFunction; i++) {
+            list += "<li>" + myCars[i] + "</li>";
+        }
+        list += "</ul>";
+
+        myArray = [date, list, ("I have " + myFunction + " cars.")];
+        document.getElementById("carList").innerHTML = myArray;
+    </script>
+
+</body>
+
+</html>
